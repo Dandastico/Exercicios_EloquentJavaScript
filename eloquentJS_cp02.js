@@ -59,7 +59,7 @@ for (let i = 0; i < 8; i++){
 }
 console.log(board);
 
-// author solution
+// author's solution
 let size = 8;
 let boards = '';
 
