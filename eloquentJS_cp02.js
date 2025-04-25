@@ -46,9 +46,31 @@ CHESSBOARD
 Program that creates a string that represents an 8x8 grid, using newline characters to separate lines.
 The lines are composed of ' ' and '#'
 */
-let lines = '';
+let board = '';
 for (let i = 0; i < 8; i++){
     for (let j = 0; j < 8; j++) {
-        
+        if (i % 2 == 0) {
+            board += (j % 2 == 0) ? ' ':'#';
+        } else {
+            board += (j % 2 == 0) ? '#':' ';
+        }
     }
+    board += '\n';
 }
+console.log(board);
+
+// author solution
+let size = 8;
+let boards = '';
+
+for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+        if ((x + y) % 2 == 0) {
+            boards += ' ';
+        } else {
+            boards += '#';
+        }
+    }
+    boards += '\n';
+}
+console.log(boards);
